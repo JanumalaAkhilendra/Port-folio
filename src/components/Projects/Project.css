@@ -1,0 +1,106 @@
+
+/* projects */
+.projectsection {
+    background: #25335b;
+    min-height: 90vh;
+    font-family: "Poppins", sans-serif;
+
+}
+.projecttitle {
+    min-height: 10vh;
+}
+
+.projecttitle h2{
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 10px;
+}
+
+.projectsection .container {
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container .card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover {
+    height: 420px;
+}
+
+.container .card .imgbx {
+    position: relative;
+    /* width: 260px;
+    height: 260px; */
+    top: -60px;
+    left: 4px;
+    object-fit: cover;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .imgbx img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card .content h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 23px;
+}
+
+.container .card .content p {
+    font-size: medium;
+}
+
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+@media (max-width:500px) {
+    .projectsection .container{
+        display: block;
+        width: 80vw;
+    }
+    .container .card{
+        display: block;
+        margin: 30vh 0vh;
+    }
+    .parallex .h1{
+        font-size: 1em;
+    }
+    
+  
+}

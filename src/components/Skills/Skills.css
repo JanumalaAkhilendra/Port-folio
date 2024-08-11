@@ -1,0 +1,191 @@
+
+/* progress bar Animation  */
+
+.progressskills {
+    background: #222;
+    min-height: 100vh;
+
+}
+
+.progressskills .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.progressskills .container .cardz {
+    position: relative;
+    width: 230px;
+    height: 250px;
+    background: #2a2a2a;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* @media (min-width : 1200px) {
+
+
+    .first {
+        transform: translate(-66px, 200px);
+    }
+
+    .second {
+        transform: translate(378px, 330px);
+    }
+
+    .third {
+        transform: translate(108px, 71px);
+    }
+
+    .fourth {
+        transform: translate(78px, 218px);
+    }
+
+    .fifth {
+        transform: translate(172px, 31px);
+    }
+
+    .sixth {
+        transform: translate(140px, 155px);
+    }
+
+    .seventh {
+        transform: translate(-369px, -224px);
+    }
+
+    .eigth {
+        transform: translate(-401px, -342px);
+    }
+
+} */
+
+.progressskills .container .cardz .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.progressskills .container .cardz .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(270deg);
+}
+
+.progressskills .container .cardz .percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px, 5px);
+}
+
+.progressskills .container .cardz .percent svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadein 1s linear forwards;
+    animation-delay: 2.5s;
+
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.progressskills .container .cardz .percent .dot {
+    position: absolute;
+    inset: 5px;
+    /* background: red; */
+    z-index: 10;
+
+    animation: animate 50s infinite linear forwards;
+
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.progressskills .container .cardz .percent .dot::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+        0 0 30px var(--clr);
+
+}
+
+
+.num {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    opacity: 0;
+    animation: fadein 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.num h2 {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num h2 span {
+    font-size: 0.5em;
+}
+
+.num p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 0;
+    overflow: hidden;
+  
+}
+
+section > .progressskills {
+    background: linear-gradient(90deg, #bd81c5, transparent);
+    width: 60vw;
+    margin: 0 20vw;
+    height: 90vh;
+}

@@ -1,0 +1,28 @@
+section{
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:700px) {
+  .projecttitle{
+    font-size: 0.5em;
+  }
+  .projecttitle h2 {
+    text-align: center;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 10px;
+}
+}
